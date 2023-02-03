@@ -1,61 +1,67 @@
-*{
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
-body{
-    background-color: #DCD7E5;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
 }
-section{
-    width: 500px;
-    height: 800px;
-    background-color: #FFFF;
+
+body {
+    font-family: Outfit, sans-serif;
+    font-size: 15px;
+    background-color: var(--light-gray);
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
+    justify-content: center;
     align-items: center;
-    border-radius: 25px;
-    padding: 30.26px;
+    height: calc(100vh - 1px);
+    margin: 1.25rem;
+    overflow: hidden;
 }
-img{
-    width: 450px;
-    height: 453.97px;
-    border-radius: 15px;
-    margin-bottom: 40.35px;
+
+.card {
+    background-color: white;
+    padding: 1.25rem;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
 }
-h1{
-    margin-bottom: 40.35px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    display: flex;
-    align-items: center;
+
+.card img {
+    max-width: 100%;
+    border-radius: 5%;
+    margin-bottom: 1rem;
+}
+
+.card h1 {
+    color: var(--dark-blue);
     text-align: center;
-
-    color: #000000;
-
+    margin-bottom: 1rem;
 }
-p{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
+
+.card p {
+    color: var(--grayish-blue);
     text-align: center;
-
-    color: #898989;
 }
-@media (max-width: 768px){
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 375px) {
+    .card {
+        width: 350px;
+    }
 }
